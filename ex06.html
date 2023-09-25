@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reajuste Salarial</title>
+    <script type="text/javascript">
+      function calcularReajuste() {
+        // Solicitar o salário atual e o percentual de reajuste ao usuário
+        var salarioAtual = parseFloat(
+          prompt("Digite o salário atual (em R$):")
+        );
+        var percentualReajuste = 0;
+
+        // Determinar o percentual de reajuste com base no salário atual
+        if (salarioAtual <= 280) {
+          percentualReajuste = 20;
+        } else if (salarioAtual <= 700) {
+          percentualReajuste = 15;
+        } else if (salarioAtual <= 1500) {
+          percentualReajuste = 10;
+        } else {
+          percentualReajuste = 5;
+        }
+
+        // Calcular o valor do aumento e o novo salário
+        var aumento = (salarioAtual * percentualReajuste) / 100;
+        var novoSalario = salarioAtual + aumento;
+
+        // Exibir os resultados
+        var resultado =
+          "Salário antes do reajuste: R$ " +
+          salarioAtual.toFixed(2) +
+          "\nPercentual de aumento aplicado: " +
+          percentualReajuste +
+          "%" +
+          "\nValor do aumento: R$ " +
+          aumento.toFixed(2) +
+          "\nNovo salário após o aumento: R$ " +
+          novoSalario.toFixed(2);
+
+        alert(resultado);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="calcularReajuste()">Calcular Reajuste Salarial</button>
+  </body>
+</html>

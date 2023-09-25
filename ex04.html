@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcular Média</title>
+    <script type="text/javascript">
+      function calcularMedia() {
+        // Obter os três números informados pelo usuário
+        var numero1 = parseInt(prompt("Informe o primeiro número:"));
+        var numero2 = parseInt(prompt("Informe o segundo número:"));
+        var numero3 = parseInt(prompt("Informe o terceiro número:"));
+
+        // Calcular a média
+        var media = (numero1 + numero2 + numero3) / 3;
+
+        // Exibir o resultado em um alerta
+        alert("A média dos três números é: " + media);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="calcularMedia()">Calcular Média</button>
+  </body>
+</html>

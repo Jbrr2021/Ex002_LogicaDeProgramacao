@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificar Par ou Ímpar</title>
+    <script type="text/javascript">
+      function verificarParOuImpar() {
+        // Solicitar um número inteiro ao usuário
+        var numero = parseInt(prompt("Digite um número inteiro:"));
+
+        // Verificar se o número é par ou ímpar usando o operador módulo (%)
+        if (numero % 2 === 0) {
+          alert("O número é par.");
+        } else {
+          alert("O número é ímpar.");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="verificarParOuImpar()">Verificar Par ou Ímpar</button>
+  </body>
+</html>
